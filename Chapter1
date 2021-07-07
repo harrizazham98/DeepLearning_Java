@@ -1,0 +1,176 @@
+Chapter 1 : A Review of Machine Learning
+
+- using algorithms to extract information from raw data and represent it
+in some type of model. We use this model to infer things about other data we
+have not yet modeled
+
+- Structural descriptions (or models) can take many forms,
+including the following:
+  Decision trees
+  Linear regression
+  Neural network weights
+  
+Each model type has a different way of applying rules to known data to predict
+unknown data. Decision trees create a set of rules in the form of a tree structure
+and linear models create a set of parameters to represent the input data.
+Neural networks have what is called a parameter vector representing the weights
+on the connections between the nodes in the network. We’ll describe the details
+of this type of model later on in this chapter.
+
+The field of AI is broad and has been around for a long time. Deep learning is a
+subset of the field of machine learning, which is a subfield of AI. 
+
+What Is Deep Learning?
+- deals with a “neural network with more than two layers"
+
+The basics of applying machine learning are best understood by asking the
+correct questions to begin with. Here’s what we need to define:
+
+  What is the input data from which we want to extract information (model)?
+  What kind of model is most appropriate for this data?
+  What kind of answer would we like to elicit from new data based on this
+    model?
+    
+The Math Behind Machine Learning: Linear Algebra
+
+- Linear algebra provides us with the mathematical underpinnings to solve the equations
+we use to build models.
+
+
+a) Scalar
+- concerned with elements in a vector
+-  a real number and an element of a field used to define a vector space
+
+b) Vector
+- The number of elements in the vector is called the “order” (or “length”) of the vector.
+
+c) Matrices
+- Consider a matrix to be a group of vectors that all have the same dimension (number of columns). In this way a matrix is a two-dimensional array for which
+we have rows and columns.
+d) Tensor
+-  a multidimensional array
+
+- Comparatively, a scalar is of rank 0 and a vector is rank 1. We also
+see that a matrix is rank 2. Any entity of rank 3 and above is considered a tensor.
+
+e) Hyperplanes
+- In a three-dimensional space, the hyperplanes would have two
+dimensions. In two-dimensional space we consider a one-dimensional line to be
+a hyperplane.
+
+- A hyperplane is a mathematical construct that divides an n-dimensional space
+into separate “parts” and therefore is useful in applications like classification
+
+- Optimizing the parameters of the hyperplane is a core concept in linear
+modeling
+
+Relevant Mathematical Operations
+
+a) Dot product
+- The dot product takes two vectors of the same length and returns a single number
+- This is done by matching up the entries in the two vectors, multiplying them, and then summing up the products thus obtained.
+
+b) Element-wise product
+- This operation takes two vectors of the same length and produces a vector of the same length with each corresponding
+element multiplied together from the two source vectors.
+
+c) Outer product
+- This is known as the “tensor product” of two input vectors. We take each element of a column vector and multiply it by all of the elements in a row vector
+creating a new row in the resultant matrix.
+
+Converting Data Into Vectors
+- The issue is that machine learning is based on linear algebra and solving sets of equations. These equations expect floating-point numbers as
+input so we need a way to translate the raw data into sets of floating-point numbers
+
+
+Solving Systems of Equations
+
+Ax = b
+
+- A is a matrix of our set of input row vectors and b is the column vector of labels for each vector in the A matrix 
+
+What is feature?
+- any column value in the input matrix A that we’re using as an independent variable
+-  but most of the time we’re going to use some sort of transformation to get the raw input data into a form that is more appropriate for modeling.
+
+- An example would be a column of input that has four different text labels in the source data. We’d
+need to scan all of the input data and index the labels being used. We’d then need to normalize these
+values (0, 1, 2, 3) between 0.0 and 1.0 based on each label’s index for every row’s column value.
+These types of transforms greatly help machine learning find better solutions to modeling problems.
+We’ll see more techniques for vectorization transforms in Chapter 5.
+
+
+- We want to find coefficients for each column in a given row for a predictor
+function that give us the output b, or the label for each row. The labels from the
+serialized sparse vectors we looked at earlier would be as follows:
+
+Methods for solving systems of linear equations:
+a) direct method
+- The direct class of
+methods is particularly effective when we can fit all of the training data (A and
+b) in memory on a single computer. Well-known examples of the direct method
+of solving sets of linear equations are Gaussian Elimination and the Normal
+Equations.
+
+b) iterative methods
+
+- The iterative class of methods is particularly effective when our data doesn’t fit into the main memory on a single computer, and looping through individual
+records from disk allows us to model a much larger amount of data.
+-  Stochastic Gradient Descent (SDG)/ Conjugate Gradient Methods / Alternating Least Squares
+-  Iterative methods also have been shown to be effective in scale-out methods, for which we not only loop through local records, but the entire dataset is sharded across a cluster
+of machines, and periodically the parameter vector is averaged across all agents
+and then updated at each local modeling agent
+
+
+The Math Behind Machine Learning: Statistics
+- some basic concepts in statistics, such as the following:
+    Probabilities
+    Distributions
+    Likelihood
+    
+ - relationships we’d like to highlight in
+descriptive statistics and inferential statistics.
+
+a) Descriptive statistics include the following:
+
+Histograms
+Boxplots
+Scatterplots
+Mean
+Standard deviation
+Correlation coefficient
+
+b) This contrasts with how inferential statistics are concerned with techniques for
+generalizing from a sample to a population. Here are some examples of inferential statistics:
+
+p-values
+credibility intervals
+
+The relationship between probability and inferential statistics:
+  Probability reasons from the population to the sample (deductive reasoning)
+  Inferential statistics reason from the sample to the population
+  
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
