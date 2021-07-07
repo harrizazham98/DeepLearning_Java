@@ -150,17 +150,49 @@ The relationship between probability and inferential statistics:
   Probability reasons from the population to the sample (deductive reasoning)
   Inferential statistics reason from the sample to the population
   
- 
+Logistic Regression
+- classification in linear modeling
+-  Logistic regression is a regression model (technically) in which the dependent variable is categorical (e.g., “classification”)
+- The binary logistic model is used to estimate the probability of
+a binary response based on a set of one or more input variables (independent
+variables or “features”). This output is the statistical probability of a category,
+given certain input predictors
+
+- Similar to linear regression, we can express a logistic regression modeling
+problem in the form of Ax = b, where A is the feature (e.g., “weight” or “square
+footage”) for all of the input examples we want to model. Each input record is a
+row in the matrix A, and the column vector b is the outcomes for all of the input
+records in the A matrix. Using a cost function and an optimization method, we
+can find a set of x parameters such that we minimize the error across all of the
+predictions versus the true outcomes.
+
+- it takes any input in the range of negative to positive infinity and maps it to output in the range of 0.0 to
+1.0. This allows us to interpret the output value as a probability
 
 
 
+Evaluating Models
+
+- the process of understanding how well they give the correct classification and then measuring the value of the prediction in a certain context.
+- we cover topics like bad positives, harmless negatives, unbalanced classes, and unequal costs for predictions
 
 
+The Confusion Matrix
+- represents the predictions and the actual outcomes (labels) for a classifier.
+- True positive, True negative, False positive and False Negative
 
+- Sensitivity and specificity are two different measures of a binary classification model.
+- The true positive rate measures how often we classify an input record as the positive class and its the correct classification. This also is called sensitivity, or recall
 
+- Specificity quantifies how well the model avoids false positives.
 
+- Accuracy is the degree of closeness of measurements of a quantity to that quantity’s true value.
 
+- The degree to which repeated measurements under the same conditions give us the same results is called precision in the context of science and statistics
 
+- Recall - This is the same thing as sensitivity and is also known as the true positive rate or the hit rate
+
+- 
 
 
 
