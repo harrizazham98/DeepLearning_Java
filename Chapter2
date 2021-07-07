@@ -1,0 +1,83 @@
+Chapter 2. Foundations of Neural Networks and Deep Learning
+
+- The weights between the units are the primary means of
+long-term information storage in neural networks. Updating the weights is the
+primary way the neural network learns new information
+
+- A network’s architecture can be defined (in part) by the following:
+    Number of neurons
+    Number of layers
+    Types of connections between layers
+    
+ - It is generally trained by a learning algorithm
+called backpropagation learning. Backpropagation uses gradient descent (see
+Chapter 1) on the weights of the connections in a neural network to minimize the
+error on the output of the network
+
+- Historically, backpropagation has been considered slow, but recent advances in
+computational power through parallelism and graphics processing units (GPUs)
+have renewed interest in neural networks.
+
+- If the classification is correct, no weight changes are made. If the classification
+is incorrect, the weights are adjusted accordingly. Weights are updated between
+individual training examples in an “online learning” fashion. This loop continues
+until all of the input examples are correctly classified
+
+MultiLayer Feed-Forward Neural Network
+
+- These artificial neurons are similar to their perceptron precursor yet
+have a different activation function depending on the layer’s specific purpose in
+the network
+
+- The inputs are the data from which you want to produce information, and the
+connection weights and biases are the quantities that govern the activity,
+activating it or not
+
+- Biases are scalar values added to the input to ensure that at least a few nodes per
+layer are activated regardless of signal strength.
+
+- When an artificial neuron passes on
+a nonzero value to another artificial neuron, it is said to be activated.
+
+- The loss functions in optimization
+algorithms, such as stochastic gradient descent (SGD), reward the network for
+good guesses and penalize it for bad ones. SGD moves the parameters of the
+network toward making good predictions and away from bad ones.
+
+
+
+Activation Function:
+
+- to propagate the output of one layer’s nodes forward to the next layer (up to and including the output layer
+- to introduce nonlinearity into the network’s modeling capabilities
+
+Loss Function:
+
+- finding the parameters (weights and biases) that will minimize the “loss” incurred from the errors.
+
+
+a) Regression
+- Mean squared error loss
+- In a technical sense, the MSE is a convex loss function. However, when dealing with hidden
+layers in neural networks, the convex property no longer holds true, because we could have
+multiple parameter sets of values resulting in the same loss value.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
