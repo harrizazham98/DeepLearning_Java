@@ -62,9 +62,56 @@ a) Regression
 layers in neural networks, the convex property no longer holds true, because we could have
 multiple parameter sets of values resulting in the same loss value.
 
+Optimization Algorithms
 
+- we divide optimization algorithms into two camps:
+        First-order
+        Second-order
 
+a) First 
+-  calculate the Jacobian matrix.
+- has one partial derivative per parameter (to calculate partial derivatives, all other variables are momentarily treated as constants
+- is a matrix of partial derivatives of the loss function with respect to the parameters in the network.
+- first-order methods calculate a gradient (Jacobian) at each step to determine which direction to go in next. This means that at each iteration, or step, we are trying to
+find the next best possible direction to go, as defined by our objective function.
+This is why we consider optimization algorithms to be a “search.” They are finding a path toward minimal error.
+- Gradient descent is a member of this path-finding class of algorithms. Variations
+of gradient descent exist, but at its core, it finds the next step in the right
+direction with respect to an objective at each iteration. Those steps move us
+toward a global minimum error or maximum likelihood.
 
+b) Second
+- calculate the derivative of the Jacobian (i.e., the derivative of a matrix of derivatives) by approximating the Hessian
+- Second-order methods can take “better” steps; however, each step will take longer to calculate
+
+Hyperparameter
+    Layer size
+ - For the input layer, this will match up to the number of features in the input vector. For the output layer, this
+will either be a single output neuron or a number of neurons matching the number of classes we are trying to predict.
+
+ - As we include more parameters in our model, we increase the amount of effort needed to train the network. Large
+parameter counts can lead to long training times and models that struggle to find convergence.
+   
+    
+    
+    
+    Magnitude (momentum, learning rate)
+    Regularization (dropout, drop connect, L1, L2)
+    Activations (and activation function families)
+    Weight initialization strategy
+    Loss functions
+    Settings for epochs during training (mini-batch size)
+    Normalization scheme for input data (vectorization)
+    
+    
+ Gradient deschent with momentum
+ - faster than standard SGD
+ - compute an exponentially weighted average of gradients and update weights
+ 
+    
+    
+    
+  
 
 
 
